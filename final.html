@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Confirmation</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ticket Confirmation</h1>
+    </header>
+
+    <section>
+        <h2>Your Ticket Has Been Confirmed!</h2>
+        <p>Thank you for your payment. You can now choose to generate a PDF or email your ticket confirmation.</p>
+
+        <form action="/generate-pdf" method="POST">
+            <button type="submit">Generate PDF</button>
+        </form>
+
+        <form action="/send-email" method="POST">
+            <button type="submit">Email Confirmation</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tanmoy Kumar Das. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

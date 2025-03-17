@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostic - Payment Options</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Payment Options</h1>
+    </header>
+
+    <section>
+        <form action="confirm.html" method="get">
+            <h2>Select a Payment Method:</h2>
+            <fieldset>
+                <legend>eBanking</legend>
+                <div>
+                    <input type="radio" id="bkash" name="payment-method" value="bkash" required>
+                    <label for="bkash">bKash</label>
+                </div>
+                <div>
+                    <input type="radio" id="nogod" name="payment-method" value="nogod">
+                    <label for="nogod">Nagad</label>
+                </div>
+                <div>
+                    <input type="radio" id="rocket" name="payment-method" value="rocket">
+                    <label for="rocket">Rocket</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bank Transaction</legend>
+                <div>
+                    <input type="radio" id="credit-card" name="payment-method" value="credit-card">
+                    <label for="credit-card">Credit Card</label>
+                </div>
+                <div>
+                    <input type="radio" id="debit-card" name="payment-method" value="debit-card">
+                    <label for="debit-card">Debit Card</label>
+                </div>
+                <div>
+                    <input type="radio" id="mastercard" name="payment-method" value="mastercard">
+                    <label for="mastercard">MasterCard</label>
+                </div>
+            </fieldset>
+
+            <a href="confirm.html"><button type="submit">Confirm Payment</button></a>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tanmoy Kumar Das. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
