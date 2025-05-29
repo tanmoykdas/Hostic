@@ -6,64 +6,38 @@ Hostic is a full-featured web platform for booking and managing doctor appointme
 
 ## Screenshots
 
-### Landing Page
-
-![image1](image1)
-
+### Home Page
 - Users select their role (patient or doctor) to log in.
 - Explains the workflow for booking and managing appointments.
 - Showcases partners (doctors and hospitals).
 
 ### Registration
-
-![image4](image4)
-
 - Role-based registration form.
 - Doctors provide hospital details; patients fill in region and personal info.
 
 ### Login
-
-![image2](image2)
-
 - Clean login interface for both roles.
-
 ---
 
 ### Doctor Dashboard
-
-![image5](image5)
-
 - Doctor profile overview, including hospital, region, qualifications, department, age, and experience.
 - Summary of total sessions and tickets sold.
 - Quick access to manage sessions, edit profile, or logout.
 
 ### Manage Sessions
-
-![image7](image7)
-
 - Doctors can view and edit their session slots.
 - Easily create new sessions by setting time, price, and ticket limits.
-
 ---
 
 ### Patient Dashboard
-
-![image8](image8)
-
 - Patient profile overview, including region, age, gender, and address.
 - Quick links for editing profile, booking appointments, and viewing history.
 
 ### Book an Appointment
-
-![image10](image10)
-
 - Patients search for doctors by region, hospital, department, and date.
 - View available session details and confirm bookings.
 
 ### Appointment History
-
-![image11](image11)
-
 - Patients can review all past appointments with detailed information.
 
 ---
@@ -152,11 +126,3 @@ logout.php      # Logout handler
 5. Open a Pull Request.
 
 ---
-
-## License
-
-[MIT](LICENSE)
-
----
-
-*This README includes selected screenshots to help you quickly understand the user interface and workflow of Hostic. For more details, see the code or reach out via issues or pull requests.*
