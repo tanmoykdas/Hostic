@@ -1,0 +1,132 @@
+.doctor-dashboard .profile-overview,
+.patient-dashboard .profile-overview {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  max-width: 800px;
+}
+
+.doctor-dashboard .profile-pic,
+.patient-dashboard .profile-pic,
+.doctor-dashboard .placeholder-pic,
+.patient-dashboard .placeholder-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #A8D5BA;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+  background: #A8D5BA;
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.doctor-dashboard .profile-details h1,
+.patient-dashboard .profile-details h1 {
+  color: #2E7D5C;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.doctor-dashboard .profile-details p,
+.patient-dashboard .profile-details p {
+  margin: 0.25rem 0;
+  color: #2E7D5C;
+  font-size: 1.05rem;
+}
+
+.doctor-dashboard .dashboard-stats,
+.patient-dashboard .dashboard-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 800px;
+}
+
+.doctor-dashboard .stat-card,
+.patient-dashboard .stat-card {
+  flex: 1;
+  background: #fff;
+  border: 1.5px solid #A8D5BA;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.07);
+}
+
+.doctor-dashboard .stat-card h2,
+.patient-dashboard .stat-card h2 {
+  color: #1B5E3A;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.doctor-dashboard .stat-card p,
+.patient-dashboard .stat-card p {
+  font-size: 2rem;
+  color: #4B9B6E;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.doctor-dashboard .stat-card a,
+.patient-dashboard .stat-card a {
+  color: #4B9B6E;
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.doctor-dashboard .stat-card a:hover,
+.patient-dashboard .stat-card a:hover {
+  color: #1B5E3A;
+}
+
+.doctor-dashboard .dashboard-nav,
+.patient-dashboard .dashboard-nav {
+  text-align: center;
+  margin: 1.5rem auto 2rem auto;
+}
+
+.doctor-dashboard .dashboard-nav a,
+.patient-dashboard .dashboard-nav a {
+  color: #4B9B6E;
+  font-weight: 500;
+  margin: 0 0.7rem;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.doctor-dashboard .dashboard-nav a:hover,
+.patient-dashboard .dashboard-nav a:hover {
+  color: #1B5E3A;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .doctor-dashboard .profile-overview,
+  .patient-dashboard .profile-overview,
+  .doctor-dashboard .dashboard-stats,
+  .patient-dashboard .dashboard-stats {
+    flex-direction: column;
+    max-width: 98vw;
+    padding: 1.2rem 1rem;
+    gap: 1.2rem;
+  }
+  .doctor-dashboard .profile-pic,
+  .patient-dashboard .profile-pic,
+  .doctor-dashboard .profile-details,
+  .patient-dashboard .profile-details {
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #f5f8f6;
+  color: #2E7D5C;
+}
+
+header {
+  background:  #2E7D5C;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+section {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  max-width: 800px;
+}
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: #1B5E3A;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 1rem;
+  color: #2E7D5C;
+  font-size: 1.05rem;
+}
+
+.flash-message {
+  background: #A8D5BA;
+  color: #1B5E3A;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  border-radius: 6px;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.06);
+}
+
+a button {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem 1rem 0.5rem 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+}
+
+a button:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+@media (max-width: 900px) {
+  section {
+    padding: 1.2rem 1rem;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 0.8rem 0.5rem;
+  }
+}

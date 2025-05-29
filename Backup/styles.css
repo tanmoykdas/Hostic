@@ -1,0 +1,1277 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #f5f8f6;
+  color: #2E7D5C;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(90deg, #4B9B6E 0%, #2E7D5C 100%);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+section {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  max-width: 800px;
+}
+
+.login_buton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: #1B5E3A;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.login_pera {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #1B5E3A;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 1rem;
+  color: #2E7D5C;
+  font-size: 1.05rem;
+}
+
+a button {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem 1rem 0.5rem 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+}
+
+a button:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.gallery {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+  border: 3px solid #A8D5BA;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+  border-color: #4B9B6E;
+}
+
+.flash-message {
+  background: #A8D5BA;
+  color: #1B5E3A;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  border-radius: 6px;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.06);
+}
+
+.login-container {
+  background: #fff;
+  max-width: 400px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container h1 {
+  color: #2E7D5C;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-container label {
+  color: #1B5E3A;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #A8D5BA;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  background: #f8faf9;
+  transition: border-color 0.2s;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+  border-color: #4B9B6E;
+  outline: none;
+}
+
+.login-container button[type="submit"] {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+}
+
+.login-container button[type="submit"]:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.login-container p {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #2E7D5C;
+  font-size: 1rem;
+}
+
+.login-container a {
+  color: #4B9B6E;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.login-container a:hover {
+  color: #1B5E3A;
+}
+
+.register-container {
+  background: #fff;
+  max-width: 440px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-container h1 {
+  color: #2E7D5C;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.register-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.register-container label {
+  color: #1B5E3A;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"],
+.register-container select {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #A8D5BA;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  background: #f8faf9;
+  transition: border-color 0.2s;
+}
+
+.register-container input:focus,
+.register-container select:focus {
+  border-color: #4B9B6E;
+  outline: none;
+}
+
+.register-container button[type="submit"] {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+}
+
+.register-container button[type="submit"]:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.profile-overview {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.10);
+  margin: 2rem auto 1.5rem auto;
+  max-width: 800px;
+}
+
+.doctor-dashboard .profile-overview,
+.patient-dashboard .profile-overview {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  margin: 2rem auto 1.5rem auto;
+  max-width: 800px;
+}
+
+.profile-pic-wrapper {
+  flex-shrink: 0;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 3px solid #A8D5BA;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+}
+
+.doctor-dashboard .profile-pic,
+.patient-dashboard .profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #A8D5BA;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+}
+
+.placeholder-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #A8D5BA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+}
+
+.doctor-dashboard .placeholder-pic,
+.patient-dashboard .placeholder-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #A8D5BA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+}
+
+.profile-details h1 {
+  color: #2E7D5C;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.profile-details p {
+  margin: 0.25rem 0;
+  color: #2E7D5C;
+  font-size: 1.05rem;
+}
+
+.doctor-dashboard .profile-details h1,
+.patient-dashboard .profile-details h1 {
+  color: #2E7D5C;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.doctor-dashboard .profile-details p,
+.patient-dashboard .profile-details p {
+  margin: 0.25rem 0;
+  color: #2E7D5C;
+  font-size: 1.05rem;
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 800px;
+}
+
+.doctor-dashboard .dashboard-stats,
+.patient-dashboard .dashboard-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 800px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #fff;
+  border: 1.5px solid #A8D5BA;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.07);
+  transition: box-shadow 0.2s;
+}
+
+.doctor-dashboard .stat-card,
+.patient-dashboard .stat-card {
+  flex: 1;
+  background: #fff;
+  border: 1.5px solid #A8D5BA;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.07);
+  transition: box-shadow 0.2s;
+}
+
+.stat-card h2 {
+  color: #1B5E3A;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.stat-card p {
+  font-size: 2rem;
+  color: #4B9B6E;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.doctor-dashboard .stat-card h2,
+.patient-dashboard .stat-card h2 {
+  color: #1B5E3A;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.doctor-dashboard .stat-card p,
+.patient-dashboard .stat-card p {
+  font-size: 2rem;
+  color: #4B9B6E;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.stat-card a {
+  color: #4B9B6E;
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.stat-card a:hover {
+  color: #1B5E3A;
+}
+
+.dashboard-nav {
+  text-align: center;
+  margin: 1.5rem auto 2rem auto;
+}
+
+.doctor-dashboard .dashboard-nav,
+.patient-dashboard .dashboard-nav {
+  text-align: center;
+  margin: 1.5rem auto 2rem auto;
+}
+
+.dashboard-nav a {
+  color: #4B9B6E;
+  font-weight: 500;
+  margin: 0 0.7rem;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.doctor-dashboard .dashboard-nav a,
+.patient-dashboard .dashboard-nav a {
+  color: #4B9B6E;
+  font-weight: 500;
+  margin: 0 0.7rem;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.dashboard-nav a:hover {
+  color: #1B5E3A;
+  text-decoration: underline;
+}
+
+.doctor-dashboard .dashboard-nav a:hover,
+.patient-dashboard .dashboard-nav a:hover {
+  color: #1B5E3A;
+  text-decoration: underline;
+}
+
+.profile-form-container {
+  background: #fff;
+  max-width: 480px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-form-container h1 {
+  color: #2E7D5C;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.profile-form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.profile-form-container label {
+  color: #1B5E3A;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.profile-form-container input[type="text"],
+.profile-form-container input[type="number"],
+.profile-form-container input[type="file"],
+.profile-form-container select {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #A8D5BA;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  background: #f8faf9;
+  transition: border-color 0.2s;
+}
+
+.profile-form-container input:focus,
+.profile-form-container select:focus {
+  border-color: #4B9B6E;
+  outline: none;
+}
+
+.profile-form-container button[type="submit"] {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+}
+
+.profile-form-container button[type="submit"]:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.profile-form-container p {
+  margin: 0.5rem 0 0.2rem 0;
+  color: #2E7D5C;
+  font-size: 1.05rem;
+}
+
+.profile-form-container img {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid #A8D5BA;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.sessions-container {
+  background: #fff;
+  max-width: 950px;
+  margin: 2.5rem auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+}
+
+.sessions-container h1,
+.sessions-container h2 {
+  color: #2E7D5C;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.sessions-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  background: #f8faf9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.07);
+}
+
+.sessions-container th,
+.sessions-container td {
+  padding: 0.9rem 0.7rem;
+  text-align: center;
+}
+
+.sessions-container th {
+  background: #A8D5BA;
+  color: #1B5E3A;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.sessions-container tr:nth-child(even) {
+  background: #f5f8f6;
+}
+
+.sessions-container tr:hover {
+  background: #e8f5e9;
+}
+
+.sessions-container a {
+  color: #4B9B6E;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.sessions-container a:hover {
+  color: #1B5E3A;
+}
+
+.sessions-container form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.sessions-container label {
+  color: #1B5E3A;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.sessions-container input[type="datetime-local"],
+.sessions-container input[type="number"] {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #A8D5BA;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  background: #f8faf9;
+  transition: border-color 0.2s;
+}
+
+.sessions-container input:focus {
+  border-color: #4B9B6E;
+  outline: none;
+}
+
+.sessions-container button[type="submit"] {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+}
+
+.sessions-container button[type="submit"]:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.patient-profile-container {
+  background: #fff;
+  max-width: 440px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patient-profile-container h1 {
+  color: #2E7D5C;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.patient-profile-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.patient-profile-container label {
+  color: #1B5E3A;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.patient-profile-container input[type="number"],
+.patient-profile-container input[type="file"],
+.patient-profile-container select,
+.patient-profile-container textarea {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #A8D5BA;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  background: #f8faf9;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.patient-profile-container input:focus,
+.patient-profile-container select:focus,
+.patient-profile-container textarea:focus {
+  border-color: #4B9B6E;
+  outline: none;
+}
+
+.patient-profile-container button[type="submit"] {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+  display: block;
+  width: 100%;
+}
+
+.patient-profile-container button[type="submit"]:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.patient-profile-container p {
+  margin: 0.5rem 0 0.2rem 0;
+  color: #2E7D5C;
+  font-size: 1.05rem;
+}
+
+.patient-profile-container img {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid #A8D5BA;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+  max-width: 150px;
+  max-height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flash-container {
+  max-width: 440px;
+  margin: 2rem auto 0 auto;
+}
+
+.book-appointment-title {
+  text-align: center;
+  color: #2E7D5C;
+  font-size: 2rem;
+  margin: 2rem 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.book-form {
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.book-form label {
+  color: #1B5E3A;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.book-form select,
+.book-form input[type="date"] {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #A8D5BA;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  background: #f8faf9;
+  transition: border-color 0.2s;
+}
+
+.book-form select:focus,
+.book-form input[type="date"]:focus {
+  border-color: #4B9B6E;
+  outline: none;
+}
+
+.book-form button[type="submit"] {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+  width: 100%;
+}
+
+.book-form button[type="submit"]:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.sessions {
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.session-card {
+  border: 1.5px solid #A8D5BA;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  transition: box-shadow 0.2s;
+}
+
+.session-card:hover {
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
+}
+
+.session-card img,
+.session-card .placeholder-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #A8D5BA;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+}
+
+.session-info {
+  flex: 1;
+}
+
+.session-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2E7D5C;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.session-info p {
+  margin: 0.25rem 0;
+  color: #2E7D5C;
+  font-size: 1rem;
+}
+
+.session-info a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: #4B9B6E;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.session-info a:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.session-info span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.nav-back {
+  text-align: center;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.nav-back a {
+  text-decoration: none;
+  color: #4B9B6E;
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.nav-back a:hover {
+  color: #1B5E3A;
+}
+
+.confirm-title {
+  text-align: center;
+  color: #2E7D5C;
+  font-size: 2rem;
+  margin: 2rem 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.confirm-form {
+  max-width: 400px;
+  margin: 2rem auto 2.5rem auto;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.confirm-form label {
+  color: #1B5E3A;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.confirm-form select {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #A8D5BA;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  background: #f8faf9;
+  transition: border-color 0.2s;
+}
+
+.confirm-form select:focus {
+  border-color: #4B9B6E;
+  outline: none;
+}
+
+.confirm-form button[type="submit"] {
+  background: #4B9B6E;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+  width: 100%;
+}
+
+.confirm-form button[type="submit"]:hover {
+  background: #6BBF8A;
+  color: #1B5E3A;
+}
+
+.session-card {
+  border: 1.5px solid #A8D5BA;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  transition: box-shadow 0.2s;
+  max-width: 500px;
+  margin: 2rem auto 1.5rem auto;
+}
+
+.session-card img,
+.session-card .placeholder-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #A8D5BA;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+}
+
+.session-info {
+  flex: 1;
+}
+
+.session-info h2 {
+  margin: 0 0 0.5rem 0;
+  color: #2E7D5C;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.session-info p {
+  margin: 0.25rem 0;
+  color: #2E7D5C;
+  font-size: 1rem;
+}
+
+.history-title {
+  text-align: center;
+  color: #2E7D5C;
+  font-size: 2rem;
+  margin: 2rem 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.nav-back {
+  text-align: center;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.nav-back a {
+  text-decoration: none;
+  color: #4B9B6E;
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.nav-back a:hover {
+  color: #1B5E3A;
+}
+
+.appointments {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.appt-card {
+  border: 1.5px solid #A8D5BA;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+
+.appt-card:hover {
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
+}
+
+.appt-card img,
+.appt-card .placeholder-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #A8D5BA;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 1px 8px rgba(44, 62, 80, 0.10);
+}
+
+.appt-info {
+  flex: 1;
+}
+
+.appt-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2E7D5C;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.appt-info p {
+  margin: 0.25rem 0;
+  color: #2E7D5C;
+  font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .register-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    padding: 1.2rem 1rem;
+    max-width: 98vw;
+  }
+  .gallery img {
+    width: 100%;
+    max-width: 320px;
+    height: 120px;
+  }
+  .profile-overview, .dashboard-stats {
+    flex-direction: column;
+    max-width: 98vw;
+    padding: 1.2rem 1rem;
+    gap: 1.2rem;
+  }
+  .profile-pic-wrapper, .profile-details {
+    align-items: center;
+    text-align: center;
+  }
+  .doctor-dashboard .profile-overview,
+  .patient-dashboard .profile-overview,
+  .doctor-dashboard .dashboard-stats,
+  .patient-dashboard .dashboard-stats {
+    flex-direction: column;
+    max-width: 98vw;
+    padding: 1.2rem 1rem;
+    gap: 1.2rem;
+  }
+  .doctor-dashboard .profile-pic,
+  .patient-dashboard .profile-pic,
+  .doctor-dashboard .profile-details,
+  .patient-dashboard .profile-details {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 0.8rem 0.5rem;
+  }
+  .gallery {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .profile-form-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .sessions-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .patient-profile-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .sessions {
+    max-width: 98vw;
+    gap: 0.7rem;
+  }
+  .session-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 1rem 0.7rem;
+  }
+  .book-form {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .session-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 1rem 0.7rem;
+    max-width: 98vw;
+  }
+  .confirm-form {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+} */

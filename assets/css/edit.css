@@ -1,0 +1,67 @@
+.edit-session {
+    background: #fff;
+    max-width: 440px;
+    margin: 3rem auto 2rem auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.10);
+    align-items: center;
+}
+
+label {
+    color: #1B5E3A;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+h1 {
+    color: #2E7D5C;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.edit-session input[type="datetime-local"],
+.edit-session input[type="number"] {
+      padding: 0.7rem 0.9rem;
+  border: 1.5px solid #A8D5BA;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f8faf9;
+}
+
+.edit-session button[type="submit"] {
+    background: #4B9B6E;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 0;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+}
+
+.edit-session button[type="submit"]:hover {
+    background: #6BBF8A;
+    color: #1B5E3A;
+}
+
+p {
+    font-weight: 500;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
