@@ -4,8 +4,6 @@ Hostic is a full-featured web platform for booking and managing doctor appointme
 
 ---
 
-## Screenshots
-
 ### Home Page
 - Users select their role (patient or doctor) to log in.
 - Explains the workflow for booking and managing appointments.
