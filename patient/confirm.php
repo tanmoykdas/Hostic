@@ -60,10 +60,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $db->begin_transaction();
     try {
         $ins = $db->prepare(
-            "INSERT INTO appointments (patient_id, session_id, quantity, total_price)
-             VALUES (?, ?, ?, ?)"
+            "INSERT INTO appointments (patient_id, session_id, quantity, total_price, amount_paid)
+             VALUES (?, ?, ?, ?, ?)"
         );
-        $ins->bind_param('iiii', $patient_id, $session_id, $quantity, $total_price);
+        $amount_paid = 0; 
+        $ins->bind_param('iiiii', $patient_id, $session_id, $quantity, $total_price, $amount_paid);
         $ins->execute();
         $ins->close();
 
